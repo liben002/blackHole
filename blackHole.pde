@@ -43,7 +43,7 @@ void draw() {
 // deletes any objects that touch the black hole
 void delete() {
   for(int i=0; i < shapes.size()-1; i++) {
-    if (shapes.get(i).getX() <= 530 && shapes.get(i).getX() >= 270 && shapes.get(i).getY() <= 530 && shapes.get(i).getY() >= 270) {
+    if (dist(shapes.get(i).getX(), shapes.get(i).getY(), 400, 400) <= 100) {
       shapes.remove(i);
       i--;
     }
